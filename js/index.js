@@ -65,9 +65,22 @@ imgclick.forEach(function(element)
     })
 })
 
+//bg color
+const contentclick = document.querySelector('.content-section')
+contentclick.addEventListener("click", function() {
+    const curColour = document.body.style.backgroundColor;
+
+    if (curColour === 'red') {
+        document.body.style.backgroundColor = "blue";
+    }
+    else {
+        document.body.style.backgroundColor = "red";
+    }
+});
 
 //winodw
 // Click - on window
+window.alert("You Won a 2019 HELLCAT or 60 Thousand Dollars!");
 window.addEventListener('resize', function(){
     console.log('this window resized');
 
