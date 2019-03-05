@@ -15,9 +15,18 @@ element.addEventListener('mouseout', function() {
     });
 })
 
+//anchor
+const tag = document.querySelector('.nav a');
+tag.addEventListener('click',function(event){
+    event.preventDefault()
+    console.log('tags are being clicked');
+})
+
+
 //button
 const buttn = document.querySelectorAll('.btn');
 buttn[0].addEventListener('click',function(event){
+    
     console.log("BOOTON WAS CLICKED ZOMG 1");
 });
 buttn[1].addEventListener('click',function(event){
@@ -27,12 +36,53 @@ buttn[1].addEventListener('click',function(event){
 //SCROLL 
 const scroll = document.querySelector(".home");
 
-window.addEventListener("scroll", function(e){
+window.addEventListener("scroll", function(event){
     console.log("scrolling....");
     
 })
 
+
+//mouseup
+const mouseUp = document.querySelector('.intro h2');
+
+mouseUp.addEventListener('mouseup', function(event) {
+    console.log("Welcome to this struggle bus")
+})
+
 //DBL CLICK
+const dblClick = document.querySelector('.footer p');
+dblClick.addEventListener('dblclick', function(event) {
+    event.target.textContent = "New phone who dis?"
+});
+
+//click img
+const imgclick = document.querySelectorAll("img");
+imgclick.forEach(function(element)
+{
+    element.addEventListener('click',function(event)
+    {
+        console.log("IMG WAS CLICKED!!!!");
+    })
+})
 
 
+//winodw
+// Click - on window
+window.addEventListener('resize', function(){
+    console.log('this window resized');
+
+})
+
+
+
+window.addEventListener('load', function(){
+    console.log('LOADING MA LAZOR');
+
+})
+
+
+window.addEventListener('click', function(){
+    console.log('window was clicked');
+
+})
 
